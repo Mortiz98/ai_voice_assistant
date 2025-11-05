@@ -1,0 +1,40 @@
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Local configuration files
+.env
+.env.*
+
+# Local databases
+*.sqlite3
+*.db
+
+# Alembic migrations folder (optional, ignore if you don't want to version them)
+migrations/
+
+# Python package metadata
+pip-wheel-metadata/
+*.egg-info/
+
+# Pytest cache
+.pytest_cache/
+
+# Temporary files
+*.swp
+.DS_Store
