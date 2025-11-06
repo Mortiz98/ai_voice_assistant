@@ -13,6 +13,13 @@ class User(Base, TimestampMixin):
     
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False)
-    email = Column(String, nullable=False,unique=True, index=True)
-    role = Column(Enum(UserRole), nullable=False)
+    email = Column(String, nullable=False, unique=True, index=True)
+    phone_number = Column(String, nullable=False, unique=True, index=True)
+    role = Column(ENUM(UserRole), nullable=False)
+    is_active = Column(Boolean, default=True, nullable=False)
+    preferences = Column(JSON, nullable=True)
+    
     properties = relationship("Property", back_populates="owner")
+    inquiries = relationship("Inquiry", back_populates="user")
+    favorites = relationship("PropertyFavorite", back_populates="user")
+   
