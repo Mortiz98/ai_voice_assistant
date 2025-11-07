@@ -1,0 +1,29 @@
+# FastAPI and server
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+
+# Database
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+alembic==1.14.0
+
+# Pydantic
+pydantic==2.10.3
+pydantic-settings==2.7.1
+
+# Twilio
+twilio==9.8.5
+
+# OpenAI
+openai==1.58.1
+
+# WebSockets
+websockets==14.1
+
+# Environment
+python-dotenv==1.0.1
+
+# Utilities
+python-dateutil==2.9.0
+

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.core.config import settings
-from app.routers import users, properties, inquiries, voice, favorites
+from app.routers import users, properties, inquiries, voice, favorites, webhooks
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -26,6 +26,7 @@ app.include_router(properties.router, prefix=settings.API_V1_STR)
 app.include_router(inquiries.router, prefix=settings.API_V1_STR)
 app.include_router(voice.router, prefix=settings.API_V1_STR)
 app.include_router(favorites.router, prefix=settings.API_V1_STR)
+app.include_router(webhooks.router)  # Webhooks sin prefijo /api/v1
 
 @app.get("/")
 def root():

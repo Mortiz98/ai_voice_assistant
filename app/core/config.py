@@ -22,6 +22,15 @@ class Settings(BaseSettings):
     TWILIO_AUTH_TOKEN: Optional[str] = os.getenv("TWILIO_AUTH_TOKEN")
     TWILIO_PHONE_NUMBER: Optional[str] = os.getenv("TWILIO_PHONE_NUMBER")
     TWILIO_WEBHOOK_URL: Optional[str] = os.getenv("TWILIO_WEBHOOK_URL")
+    
+    # OpenAI Configuration
+    OPENAI_API_KEY: Optional[str] = os.getenv("OPENAI_API_KEY")
+    OPENAI_REALTIME_API_URL: str = "https://api.openai.com/v1/realtime"
+    OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o-realtime-preview-2024-12-17")
+    
+    # Application Configuration
+    BASE_URL: str = os.getenv("BASE_URL", "http://localhost:8000")
+    NGROK_URL: Optional[str] = os.getenv("NGROK_URL")  # Para desarrollo local
 
     @field_validator("SQLALCHEMY_DATABASE_URI", mode="before")
     def assemble_db_connection(cls, v: Optional[str], values: Dict[str, Any]) -> Any:
