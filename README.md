@@ -51,7 +51,7 @@ sequenceDiagram
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/twilio_voice_AI_assistant.git
+    git clone https://github.com/Mortiz98/twilio_voice_AI_assistant.git
     cd twilio_voice_AI_assistant
     ```
 
@@ -103,3 +103,4 @@ sequenceDiagram
 
 ---
 Developed with focus on low-latency and conversational excellence.
+
